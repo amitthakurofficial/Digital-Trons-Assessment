@@ -1,9 +1,11 @@
 # Digital-Trons-Test
 
 Client--
+
 ng serve
 
 server--
+
 npm install
 
 nodemon index.js
