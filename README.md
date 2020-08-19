@@ -1,12 +1,12 @@
 # Digital-Trons-Test
 
-Client--
+#Client
 
 ng serve
 
 
 
-server--
+#server
 
 npm install
 
