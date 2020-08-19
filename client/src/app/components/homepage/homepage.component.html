@@ -1,0 +1,7 @@
+<div class="main">
+  <h2>Available Time Slots</h2>
+<div *ngFor = "let slot of slots" class="slots">
+  <p *ngIf="!slot.userId" (click)="details(slot._id)">{{slot.time}}</p>
+  <p class="booked" *ngIf="slot.userId" (click)="update(slot.userId)">{{slot.time}}</p>
+  </div>
+  </div>

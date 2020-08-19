@@ -1,0 +1,44 @@
+<form class="row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="pa-row">
+    <h4>User Details</h4>
+  </div>
+  <!-- <div class="pa-row">
+    <label> Email Id or Beneficiary Mobile Number</label>
+  </div> -->
+  <!-- <div class="pa-row">
+    <span class="falaicon "> <i class="svg-icon iconFacebook"></i></span>
+  </div> -->
+  <div class="pa-row">
+    <label>First Name </label>
+    <input class="form-control" type="text" placeholder="First Name" name="firstName" formControlName="firstName">
+    <div *ngIf="submitted && f.firstName.errors" class="err">
+      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      <!-- <div *ngIf="f.firstName.errors.firstName">First Name must be a valid email address</div> -->
+  </div>
+  </div>
+  <div class="pa-row">
+    <label>Last Name </label>
+    <input class="form-control" type="text" placeholder="Last Name" name="lastName" formControlName="lastName">
+    <div *ngIf="submitted && f.lastName.errors" class="err">
+      <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+      <!-- <div *ngIf="f.email.errors.email">Lasr Name must be a valid email address</div> -->
+  </div> 
+  </div>
+  <div class="pa-row">
+    <label> Mobile Number</label>
+    <input type="text" placeholder="Mobile Number"  formControlName="mobileNumber" pattern="[0-9]*" minlength="10" maxlength="10" onlyNumber>
+    <div *ngIf="submitted && f.mobileNumber.errors" class="err">
+        <div *ngIf="f.mobileNumber.errors.required">Mobile number is required</div>
+        <div *ngIf="f.mobileNumber.errors.minlength">Mobile number must be at least 10 characters</div>
+    </div>
+</div>
+  <div class="pa-row pas">
+    <!-- <label>Forgot password?</label> -->
+  </div>
+  <div class="reg-button">
+    <div class="pa-row-6">
+      <!-- <button (click)="cancel()">cancel </button> -->
+      <button type="submit">update</button>
+    </div>
+  </div>
+</form>
