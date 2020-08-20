@@ -2,6 +2,8 @@
 
 #Client
 
+npm install
+
 ng serve
 
 
